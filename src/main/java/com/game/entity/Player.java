@@ -1,24 +1,41 @@
 package com.game.entity;
 
+import jakarta.persistence.*;
+import org.hibernate.annotations.Type;
+
 import java.util.Date;
 
-
+@Entity
+@Table(schema = "rpg", name = "player")
 public class Player {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column(name = "name")
     private String name;
 
+    @Column(name = "title")
     private String title;
 
+    @Column(name = "race")
+    @Enumerated(EnumType.ORDINAL)
     private Race race;
 
+    @Column(name = "profession")
+    @Enumerated(EnumType.ORDINAL)
     private Profession profession;
 
+    @Column(name = "birthday")
     private Date birthday;
 
-    private Boolean banned;
+    @Column(name = "banned")
+       private Boolean banned;
 
+    @Column(name = "level")
     private Integer level;
+
 
     public Player() {
     }

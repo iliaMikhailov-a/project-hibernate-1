@@ -109,6 +109,21 @@
 			<artifactId>thymeleaf-spring5</artifactId>
 			<version>3.0.15.RELEASE</version>
 		</dependency>
+
+
+		<dependency>
+			<groupId>org.hibernate.orm</groupId>
+			<artifactId>hibernate-core</artifactId>
+			<version>6.6.5.Final</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+			<version>42.7.7</version>
+		</dependency>
+
+
 	</dependencies>
 
 	<build>
